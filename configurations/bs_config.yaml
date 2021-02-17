@@ -1,0 +1,39 @@
+scanner:
+
+    filscanner:
+        simbol: fil
+        node_listen_address: http://127.0.0.1:1234/rpc/v0
+        start_monitoring_block: 20000
+        collect_account_list_path: ./data/collectaddress.txt
+        deposit_account_list_path:  ./data/depositaddress.txt
+        deposit_account_db_path:  ./database
+        notify_deposit_url: http://127.0.0.1:5556/
+        notify_abnormal_withdrawal_url: http://127.0.0.1:5555/
+        confirmation_count: 10
+        max_address_readbuffer_size   : 10000
+
+
+    ethscanner:
+
+        simbol: eth
+        node_listen_address: https://mainnet.infura.io/v3/9366572d83da40e4b827a664e6194e06
+        start_monitoring_block: 30000
+        collect_account_list_path: ./data/collectaddress.txt
+        deposit_account_list_path:  ./data/depositaddress.txt
+        deposit_account_db_path:  ./database
+        notify_deposit_url: http://localhost:xxx/
+        notify_abnormal_withdrawal_url: http://localhost:xxx/
+        confirmation_count: 10
+        max_address_readbuffer_size   : 10000
+
+
+
+server:
+
+    logpath: ./logs/
+    logoutput : both  # both / stdout / file
+    loglevel  : debug # debug / info / warn / error / fetal
+    mode : b  # b / d / w
+
+
+
